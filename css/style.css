@@ -1,0 +1,33 @@
+.basic {
+    color: red;
+    background-color: azure;
+}
+
+.metadata {
+    color: white;
+    background-color: forestgreen;
+}
+/*transition property specifies the effect, "ease-in-out" provides a slow start and end*/
+
+.zoom {
+    text-align: center;
+    border: solid 1px black;
+    padding: 10px;
+    float: left;
+    max-width: 100%;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+}
+
+.enhance {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+}
+
+.zindex {
+    z-index: 10000;
+}
