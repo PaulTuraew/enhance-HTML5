@@ -1,3 +1,8 @@
+#row{
+    display:block;
+    width:100%;
+}
+
 .basic {
     color: red;
     background-color: azure;
@@ -7,18 +12,34 @@
     color: white;
     background-color: forestgreen;
 }
-/*transition property specifies the effect, "ease-in-out" provides a slow start and end*/
 
+.sectioning{
+    color: dimgrey;
+    background-color: coral;
+}
+
+.text-content{
+    color:darkkhaki;
+    background-color:beige;
+}
+
+.text-semantics{
+    color:blueviolet;
+    background-color:floralwhite;
+}
+
+/*transition property specifies the effect, "ease-in-out" provides a slow start and end*/
 .zoom {
     text-align: center;
     border: solid 1px black;
     padding: 10px;
-    float: left;
+    margin:10px;
+    float:left;
     max-width: 100%;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
 }
 
 .enhance {
