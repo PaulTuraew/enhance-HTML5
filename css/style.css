@@ -28,18 +28,67 @@
     background-color:floralwhite;
 }
 
+.multimedia{
+    color:yellow;
+    background-color:darkblue;
+}
+
+.embedded{
+    color:white;
+    background-color:black;
+}
+
+.scripting{
+    color:white;
+    background-color:gray;
+}
+
+.edits{
+    color:white;
+    background-color:firebrick;
+}
+
+.table{
+    color:black;
+    background-color:wheat;
+}
+
+.forms{
+    color:lightgreen;
+    background-color:black;
+}
+
+.interactive{
+    color:black;
+    background-color:orchid;
+}
+
+.components{
+    color:white;
+    background-color:deepskyblue;
+}
+
 /*transition property specifies the effect, "ease-in-out" provides a slow start and end*/
 .zoom {
     text-align: center;
+    font-family: avenir;
     border: solid 1px black;
     padding: 10px;
     margin:10px;
     float:left;
     max-width: 100%;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    -webkit-transition: all 0.75s ease-in-out;
+    -moz-transition: all 0.75s ease-in-out;
+    -o-transition: all 0.75s ease-in-out;
+    -ms-transition: all 0.75s ease-in-out;
+}
+
+/*decreases opacity for all .zoom divs within #rows that are currently not being hovered on*/
+#outside-container:hover > #row .zoom:not(:hover) {
+    opacity: 0.3;
 }
 
 .enhance {
