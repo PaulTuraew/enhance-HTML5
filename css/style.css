@@ -101,3 +101,37 @@
 .zindex {
     z-index: 10000;
 }
+
+
+/*dropdown animation styling*/
+/*
+#holder {
+ position: absolute;
+ top: 500px;
+ left: 100px;   
+}
+
+add these classes to container circle divs
+.sample{
+    margin-left: 50px;
+    background: yellow;
+    padding: 20px;
+}
+
+.sample2{
+    margin-left: -50px;
+    background: pink;
+    padding: 20px;
+}
+
+.sample3{
+    margin-right: 100px;
+    background: green;
+    padding: 20px;
+}
+
+.dropRow {
+ position: absolute;
+ display: none;
+ top: -20px;
+}*/
