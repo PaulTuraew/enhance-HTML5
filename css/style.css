@@ -1,107 +1,123 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel);
+@import "compass/css3";
+
+body{
+    background-color: black;
+    padding: 150px;
+}
+
 #row{
     display:block;
     width:100%;
 }
 
-.basic {
-    color: red;
-    background-color: azure;
-}
-
-.metadata {
-    color: white;
-    background-color: forestgreen;
-}
-
-.sectioning{
-    color: dimgrey;
-    background-color: coral;
-}
-
-.text-content{
-    color:darkkhaki;
-    background-color:beige;
-}
-
-.text-semantics{
-    color:blueviolet;
-    background-color:floralwhite;
-}
-
-.multimedia{
-    color:yellow;
-    background-color:darkblue;
-}
-
-.embedded{
+.basic, .metadata, .sectioning, .text-semantics, .text-content, .multimedia, .embedded, .scripting, .edits, .table, .forms, .interactive, .components {
     color:white;
-    background-color:black;
+    background: -webkit-linear-gradient(left top, #8BFFA4 , black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #8BFFA4, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #8BFFA4, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #8BFFA4 , black); /* Standard syntax (must be last) */
 }
 
-.scripting{
-    color:white;
-    background-color:gray;
-}
-
-.edits{
-    color:white;
-    background-color:firebrick;
-}
-
-.table{
-    color:black;
-    background-color:wheat;
-}
-
-.forms{
-    color:lightgreen;
-    background-color:black;
-}
-
-.interactive{
-    color:black;
-    background-color:orchid;
-}
-
-.components{
-    color:white;
-    background-color:deepskyblue;
-}
 
 /*transition property specifies the effect, "ease-in-out" provides a slow start and end*/
 .zoom {
-    text-align: center;
-    font-family: avenir;
-    border: solid 1px black;
+    text-align: left;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 110%;
+    border: solid 2px #ffffff;
     padding: 10px;
     margin:10px;
     float:left;
-    max-width: 100%;
-    width:100px;
-    height:100px;
-    border-radius: 50%;
+    width:130px;
+    height:130px;
+/*    border-radius: 50%;*/
     -webkit-transition: all 0.75s ease-in-out;
     -moz-transition: all 0.75s ease-in-out;
     -o-transition: all 0.75s ease-in-out;
     -ms-transition: all 0.75s ease-in-out;
+    z-index: 100000;
 }
 
 /*decreases opacity for all .zoom divs within #rows that are currently not being hovered on*/
 #outside-container:hover > #row .zoom:not(:hover) {
-    opacity: 0.3;
+/*    opacity: 0.1;*/
+    background: rgba(0,0,0,0.8)
 }
 
 .enhance {
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -o-transform: scale(2);
-    transform: scale(2);
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    -o-transform: scale(3);
+    transform: scale(3);
 }
 
-.zindex {
-    z-index: 10000;
+.show-info {
+    display: none;
+    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+    font-weight: lighter;
+    font-size: 40%;
+    position:relative;
+    width: 100%;
+    line-height: 12px;
+    padding-top: 25px;
 }
 
+/*SCSS glitch effect page title*/
+body{
+  background:black;
+  font-family: Cinzel;
+}
+
+.glitch{
+  color:#8BFFA4;
+  font-size:50px;
+  position:relative;
+  width:400px;
+  margin:0 auto;
+}
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:-1px 0 white;
+  top:0;
+  color:#8BFFA4;
+  background:black;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:1px 0 white; 
+  top:0;
+  color:#8BFFA4;
+  background:black;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim-2 3s infinite linear alternate-reverse;
+}
 
 /*dropdown animation styling*/
 /*
